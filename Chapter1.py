@@ -1,8 +1,15 @@
 import pymysql, random
+
 from sqlalchemy import create_engine, Column, DateTime, String, Integer, ForeignKey, func
 from sqlalchemy.orm import relationship, backref, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy_utils import database_exists, drop_database, create_database, analyze
+
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
+from flask_bootstrap import Bootstrap
+
 
 # Set the db connection details
 
